@@ -1,25 +1,20 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "version": "1.0",
+  "description": "Uses OAuth to connect to Google's People API and display contacts photos.",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "FriendBlock, friends face's in a block.",
+    "default_popup": "index.html"
+  },
+  "oauth2": {
+    "client_id": "910636426569-5t8ve1l5hpb7irf4me6qektt22am6kh9.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/calendar.events.readonly"
+    ]
+  },
+  "permissions": ["identity"],
+  "content_security_policy": "script-src 'self' 'sha256-hihlz4iYLzqaV6w9/fSDgXVZBz1tFQVEesO9H8beLQU='; object-src 'self'"
 }
