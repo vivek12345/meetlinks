@@ -1,2 +1,3 @@
-import Events from './Events';
-export { Events };
+import Events from "./Events";
+import NoEvents from "./NoEvents";
+export { Events, NoEvents };
